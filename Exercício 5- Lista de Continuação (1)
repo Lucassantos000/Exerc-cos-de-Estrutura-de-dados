@@ -1,0 +1,38 @@
+//Exercício 1, PDF Exercícios de continuação.
+/*1. Desenvolva um algoritmo em C que em função informe ao usuário em tela as mensagens :
+“VERDADEIRO”: Quando o usuário informar nº positivo (exemplo: 1,2,3,4,5 );
+“FALSO”: Quando o usuário informar nº negativo (ex.: -1,-2,-3 etc)
+“VOCÊ PRECISA SELECIONAR UMA DAS OPÇÕES”: Quando o usuário informar valor Nulo (0).
+*/
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+#include <math.h>
+
+int verificar(int n){
+		 if(n>0){
+		 	printf("\nVERDADEIRO\n");
+		 } else 
+		 	printf("\nFALSO\n");
+		 
+	return 0;
+}
+
+	main(){
+	setlocale(LC_ALL, "Portuguese");
+	printf("\n\t\t Oi! Tudo bem?\nEste programa tem como função Verificar uma entrada e responder com uma mesnagem pré-definida  \n ");
+   
+   int num;	
+   printf("\nDigite um número:\n");
+   scanf("%d", &num);
+   while (num == 0 ){
+   		system("cls");
+   		printf("\nDigite um número:\n");
+   		scanf("%d", &num);
+   }
+   getchar();
+	verificar(num);
+	system("pause");
+}
+		
